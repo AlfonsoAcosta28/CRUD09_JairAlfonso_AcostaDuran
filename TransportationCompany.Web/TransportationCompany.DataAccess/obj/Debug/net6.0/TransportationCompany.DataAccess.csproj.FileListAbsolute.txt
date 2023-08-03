@@ -1,0 +1,17 @@
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\bin\Debug\net6.0\TransportationCompany.DataAccess.deps.json
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\bin\Debug\net6.0\TransportationCompany.DataAccess.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\bin\Debug\net6.0\TransportationCompany.DataAccess.pdb
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\bin\Debug\net6.0\TransportationCompany.Core.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\bin\Debug\net6.0\TransportationCompany.Core.pdb
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\obj\Debug\net6.0\TransportationCompany.DataAccess.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\obj\Debug\net6.0\TransportationCompany.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\obj\Debug\net6.0\TransportationCompany.DataAccess.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\obj\Debug\net6.0\TransportationCompany.DataAccess.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\obj\Debug\net6.0\TransportationCompany.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\obj\Debug\net6.0\TransportationCompany.DataAccess.csproj.CopyComplete
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\obj\Debug\net6.0\TransportationCompany.DataAccess.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\obj\Debug\net6.0\refint\TransportationCompany.DataAccess.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\obj\Debug\net6.0\TransportationCompany.DataAccess.pdb
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\obj\Debug\net6.0\ref\TransportationCompany.DataAccess.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\bin\Debug\net6.0\TransportationCompany.DataAccess.runtimeconfig.json
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.DataAccess\obj\Debug\net6.0\TransportationCompany.DataAccess.genruntimeconfig.cache

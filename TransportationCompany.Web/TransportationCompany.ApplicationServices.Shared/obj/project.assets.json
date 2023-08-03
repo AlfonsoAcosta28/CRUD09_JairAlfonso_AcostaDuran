@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "TransportationCompany.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/TransportationCompany.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TransportationCompany.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "TransportationCompany.Core/1.0.0": {
+      "type": "project",
+      "path": "../TransportationCompany.Core/TransportationCompany.Core.csproj",
+      "msbuildProject": "../TransportationCompany.Core/TransportationCompany.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "TransportationCompany.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\User\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Core\\TransportationCompany.Core.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Core\\TransportationCompany.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

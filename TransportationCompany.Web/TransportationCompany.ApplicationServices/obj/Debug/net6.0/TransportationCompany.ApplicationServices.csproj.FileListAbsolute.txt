@@ -1,0 +1,12 @@
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\bin\Debug\net6.0\TransportationCompany.ApplicationServices.deps.json
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\bin\Debug\net6.0\TransportationCompany.ApplicationServices.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\bin\Debug\net6.0\TransportationCompany.ApplicationServices.pdb
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\obj\Debug\net6.0\TransportationCompany.ApplicationServices.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\obj\Debug\net6.0\TransportationCompany.ApplicationServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\obj\Debug\net6.0\TransportationCompany.ApplicationServices.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\obj\Debug\net6.0\TransportationCompany.ApplicationServices.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\obj\Debug\net6.0\TransportationCompany.ApplicationServices.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\obj\Debug\net6.0\TransportationCompany.ApplicationServices.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\obj\Debug\net6.0\refint\TransportationCompany.ApplicationServices.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\obj\Debug\net6.0\TransportationCompany.ApplicationServices.pdb
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\obj\Debug\net6.0\ref\TransportationCompany.ApplicationServices.dll

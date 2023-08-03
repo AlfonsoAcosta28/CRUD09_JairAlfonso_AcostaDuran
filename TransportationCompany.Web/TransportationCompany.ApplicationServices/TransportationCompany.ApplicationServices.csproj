@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TransportationCompany.ApplicationServices.Shared\TransportationCompany.ApplicationServices.Shared.csproj" />
+    <ProjectReference Include="..\TransportationCompany.Core\TransportationCompany.Core.csproj" />
+    <ProjectReference Include="..\TransportationCompany.DataAccess\TransportationCompany.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

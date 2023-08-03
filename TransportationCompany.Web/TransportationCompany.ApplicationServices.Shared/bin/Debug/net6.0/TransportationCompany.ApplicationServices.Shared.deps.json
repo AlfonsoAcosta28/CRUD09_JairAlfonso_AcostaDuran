@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "TransportationCompany.ApplicationServices.Shared/1.0.0": {
+        "dependencies": {
+          "TransportationCompany.Core": "1.0.0"
+        },
+        "runtime": {
+          "TransportationCompany.ApplicationServices.Shared.dll": {}
+        }
+      },
+      "TransportationCompany.Core/1.0.0": {
+        "runtime": {
+          "TransportationCompany.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TransportationCompany.ApplicationServices.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TransportationCompany.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

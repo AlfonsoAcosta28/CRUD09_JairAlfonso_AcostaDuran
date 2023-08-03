@@ -11,8 +11,7 @@ namespace TransportationCompany.DataAccess
 {
     public class TransportationCompanyContext : IdentityDbContext
     {
-        public DbSet<Destination> Destinations { get; set; }
-        public DbSet<Origin> Origins { get; set; }
+        public DbSet<City> Cities { get; set; }
         public DbSet<Journey> Journeys { get; set; }
         public DbSet<Passengers> Passengers { get; set; }
         public DbSet<Ticket> Ticket { get; set; }

@@ -11,9 +11,8 @@ namespace TransportationCompany.Core.Entities
     {
         [Key]
         public int Id { get; set; }
-
-        public Destination DestinationId { get; set; }
-        public Origin OriginId { get; set; }
+        public City DestinationId { get; set; }
+        public City OriginId { get; set; }
         public DateTime Departure { get; set; }
         public DateTime Arrival { get; set; }
 
@@ -23,5 +22,7 @@ namespace TransportationCompany.Core.Entities
         {
             Tickets = new List<Ticket>();
         }
+
+       
     }
 }
