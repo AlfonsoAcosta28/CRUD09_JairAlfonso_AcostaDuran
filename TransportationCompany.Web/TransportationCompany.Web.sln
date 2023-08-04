@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportationCompany.Appli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportationCompany.ApplicationServices.Shared", "TransportationCompany.ApplicationServices.Shared\TransportationCompany.ApplicationServices.Shared.csproj", "{09B967CE-0372-4B29-BDA9-77B85DF706DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportationCompany.UnitTest", "TransportationCompany.UnitTest\TransportationCompany.UnitTest.csproj", "{2431B268-3768-4190-98BF-0AD68F9CA6C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{09B967CE-0372-4B29-BDA9-77B85DF706DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09B967CE-0372-4B29-BDA9-77B85DF706DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09B967CE-0372-4B29-BDA9-77B85DF706DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2431B268-3768-4190-98BF-0AD68F9CA6C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2431B268-3768-4190-98BF-0AD68F9CA6C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2431B268-3768-4190-98BF-0AD68F9CA6C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2431B268-3768-4190-98BF-0AD68F9CA6C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

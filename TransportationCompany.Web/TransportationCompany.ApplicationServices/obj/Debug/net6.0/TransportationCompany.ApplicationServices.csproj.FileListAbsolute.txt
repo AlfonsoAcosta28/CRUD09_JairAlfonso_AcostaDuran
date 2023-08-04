@@ -10,3 +10,10 @@ C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationComp
 C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\obj\Debug\net6.0\refint\TransportationCompany.ApplicationServices.dll
 C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\obj\Debug\net6.0\TransportationCompany.ApplicationServices.pdb
 C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\obj\Debug\net6.0\ref\TransportationCompany.ApplicationServices.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\bin\Debug\net6.0\TransportationCompany.ApplicationServices.Shared.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\bin\Debug\net6.0\TransportationCompany.Core.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\bin\Debug\net6.0\TransportationCompany.DataAccess.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\bin\Debug\net6.0\TransportationCompany.ApplicationServices.Shared.pdb
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\bin\Debug\net6.0\TransportationCompany.Core.pdb
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\bin\Debug\net6.0\TransportationCompany.DataAccess.pdb
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.ApplicationServices\obj\Debug\net6.0\TransportationCompany.ApplicationServices.csproj.CopyComplete
