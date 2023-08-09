@@ -2,6 +2,7 @@ using AutoMapper.Execution;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using System.Configuration;
 using System.Xml.Linq;
 using TransportationCompany.ApplicationServices;
 using TransportationCompany.ApplicationServices.JourneyServices;
@@ -55,11 +56,20 @@ builder.Host.UseSerilog((context, services, configuration) => configuration
     .Enrich.FromLogContext()
     .WriteTo.Console());
 
+builder.Services.AddDbContext<TransportationCompanyContext>(options =>
+{
+    options.UseSqlServer(connectionString);
+}, ServiceLifetime.Scoped);
+
+
 var app = builder.Build();
 
 
-app.UseSwagger();
-app.UseSwaggerUI();
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/", "Test API v1"));
+}
 
 //app.MapControllerRoute(name: "default", pattern: "{controller=swagger}/{action=Index}/{id?}");
 

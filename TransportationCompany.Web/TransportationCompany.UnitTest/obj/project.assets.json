@@ -5940,6 +5940,7 @@
       "NUnit >= 3.13.3",
       "NUnit.Analyzers >= 3.6.1",
       "NUnit3TestAdapter >= 4.4.2",
+      "Newtonsoft.Json >= 13.0.3",
       "TransportationCompany.ApplicationServices >= 1.0.0",
       "TransportationCompany.DataAccess >= 1.0.0",
       "TransportationCompany.Web >= 1.0.0",
@@ -6022,6 +6023,10 @@
           "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[4.4.2, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           },
           "coverlet.collector": {
             "target": "Package",

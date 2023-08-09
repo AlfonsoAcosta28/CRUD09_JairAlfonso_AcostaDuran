@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,31 @@ namespace TransportationCompany.DataAccess.RepositoryEntities
         public TicketRepository(TransportationCompanyContext TransportationCompanyContext) : base(TransportationCompanyContext)
         {
         }
+
+        public override async Task<Ticket> AddAsync(Ticket entity)
+        {
+            var journey = await Context.Journeys.FindAsync(entity.Journey.Id);
+            var passenger = await Context.Passengers.FindAsync(entity.Passenger.Id);
+
+            entity.Passenger = null;
+            entity.Journey = null;
+
+            await Context.Ticket.AddAsync(entity);
+
+            journey.Tickets.Add(entity);
+            passenger.Tickets.Add(entity);
+
+            await Context.SaveChangesAsync();
+            return entity;
+        }
+/*
+        public override async Task<Ticket> GetAsync(int id)
+        {
+            var journey = await Context.Journeys.Include(x => x.Tickets).FirstOrDefaultAsync(x => x.Id == id);
+            var passenger = await Context.Passengers.Include(x => x.Tickets).FirstOrDefaultAsync(x => x.Id == id);
+
+                 
+        }
+*/
     }
 }

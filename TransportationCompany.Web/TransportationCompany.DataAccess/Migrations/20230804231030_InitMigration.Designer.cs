@@ -11,7 +11,7 @@ using TransportationCompany.DataAccess;
 namespace TransportationCompany.DataAccess.Migrations
 {
     [DbContext(typeof(TransportationCompanyContext))]
-    [Migration("20230803200944_InitMigration")]
+    [Migration("20230804231030_InitMigration")]
     partial class InitMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -376,7 +376,7 @@ namespace TransportationCompany.DataAccess.Migrations
             modelBuilder.Entity("TransportationCompany.Core.Entities.Ticket", b =>
                 {
                     b.HasOne("TransportationCompany.Core.Entities.Journey", "Journey")
-                        .WithMany()
+                        .WithMany("Tickets")
                         .HasForeignKey("JourneyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -390,6 +390,11 @@ namespace TransportationCompany.DataAccess.Migrations
                     b.Navigation("Journey");
 
                     b.Navigation("Passenger");
+                });
+
+            modelBuilder.Entity("TransportationCompany.Core.Entities.Journey", b =>
+                {
+                    b.Navigation("Tickets");
                 });
 
             modelBuilder.Entity("TransportationCompany.Core.Entities.Passengers", b =>

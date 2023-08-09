@@ -13,5 +13,11 @@ namespace TransportationCompany.Core.Entities
         public int Id { get; set; }
 
         public string Name { get; set; }
+
+        List<Journey> Journeys { get; set; }    
+
+        public City() { 
+            Journeys = new List<Journey>();
+        }
     }
 }

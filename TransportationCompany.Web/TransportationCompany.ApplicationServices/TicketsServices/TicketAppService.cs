@@ -24,8 +24,8 @@ namespace TransportationCompany.ApplicationServices.TicketsServices
         }
         public async Task<TicketDto> AddTicketAsync(TicketDto elementDto)
         {
-            var eleent = _mapper.Map<Ticket>(elementDto);
-            await _repository.AddAsync(eleent);
+            var element = _mapper.Map<Ticket>(elementDto);
+            await _repository.AddAsync(element);
             return elementDto;
         }
 

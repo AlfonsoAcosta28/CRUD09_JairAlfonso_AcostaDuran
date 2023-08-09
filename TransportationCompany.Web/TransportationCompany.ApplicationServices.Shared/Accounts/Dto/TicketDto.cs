@@ -12,10 +12,8 @@ namespace TransportationCompany.Accounts.Dto
     {
         [Key]
         public int Id { get; set; }
-
-        public Journey JourneyId { get; set; }
-
-        public Passengers PassengerId { get; set; }
+        public Journey Journey { get; set; }
+        public Passengers Passenger { get; set; }
         public int Seat { get; set; }
     }
 }
