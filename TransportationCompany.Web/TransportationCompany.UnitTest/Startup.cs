@@ -41,7 +41,7 @@ namespace TransportationCompany.UnitTest
 
             services.AddTransient<IRepository<int, Ticket>, TicketRepository>();
             services.AddTransient<IRepository<int, Journey>, JourneyRepository>();
-            services.AddTransient<IRepository<int, Passengers>, PassengersRepository>();
+            services.AddTransient<IRepository<int, Passenger>, PassengersRepository>();
         }
 
         public IConfiguration Configuration { get; }

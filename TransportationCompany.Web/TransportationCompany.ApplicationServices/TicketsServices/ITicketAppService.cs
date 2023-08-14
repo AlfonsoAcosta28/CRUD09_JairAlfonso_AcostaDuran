@@ -18,6 +18,6 @@ namespace TransportationCompany.ApplicationServices.TicketsServices
 
         Task<Ticket> GetTicketAsync(int elementId);
 
-        Task<Ticket> EditTicketAsync(Ticket element);
+        Task<Ticket> EditTicketAsync(TicketDto element);
     }
 }

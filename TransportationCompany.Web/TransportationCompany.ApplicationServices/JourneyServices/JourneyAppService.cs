@@ -27,8 +27,9 @@ namespace TransportationCompany.ApplicationServices.JourneyServices
             await _repository.DeleteAsync(elementId);
         }
 
-        public async Task<Journey> EditJourneyAsync(Journey element)
+        public async Task<Journey> EditJourneyAsync(JourneyDto elementDto)
         {
+            var element = _mapper.Map<Journey>(elementDto);
             await _repository.UpdateAsync(element);
 
             return element;

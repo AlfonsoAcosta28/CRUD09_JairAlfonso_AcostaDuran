@@ -12,16 +12,12 @@ namespace TransportationCompany.Accounts.Dto
     {
         [Key]
         public int Id { get; set; }
-
         [Required]
         [StringLength(32)]
         public string FirstName { get; set; }
-
-
         [Required]
         [StringLength(32)]
         public string LastName { get; set; }
-
         public int Age { get; set; }
 
         public List<Ticket> Tickets { get; set; }

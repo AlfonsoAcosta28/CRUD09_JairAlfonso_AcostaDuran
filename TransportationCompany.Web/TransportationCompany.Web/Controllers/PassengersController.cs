@@ -16,14 +16,14 @@ namespace TransportationCompany.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Passengers>> GetAll()
+        public async Task<IEnumerable<Passenger>> GetAll()
         {
             var list = await passengersAppService.GetPassengersAsync();
             return list;
         }
 
         [HttpGet("{id}")]
-        public async Task<Passengers> Get(int id)
+        public async Task<Passenger> Get(int id)
         {
             var element = await passengersAppService.GetPassengersAsync(id);
             return element;
@@ -36,7 +36,7 @@ namespace TransportationCompany.Web.Controllers
         }
 
         [HttpPut("{id}")]
-        public async void Put(int id, [FromBody] Passengers value)
+        public async void Put(int id, [FromBody] Passenger value)
         {
             value.Id = id;
             await passengersAppService.EditPassengersAsync(value);

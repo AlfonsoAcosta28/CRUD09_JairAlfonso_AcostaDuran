@@ -18,6 +18,6 @@ namespace TransportationCompany.ApplicationServices.JourneyServices
 
         Task<Journey> GetJourneyAsync(int elementId);
 
-        Task<Journey> EditJourneyAsync(Journey element);
+        Task<Journey> EditJourneyAsync(JourneyDto element);
     }
 }

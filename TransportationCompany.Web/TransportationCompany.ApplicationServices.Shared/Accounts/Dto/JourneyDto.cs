@@ -12,9 +12,10 @@ namespace TransportationCompany.Accounts.Dto
     {
         [Key]
         public int Id { get; set; }
-
-        public City DestinationId { get; set; }
-        public City OriginId { get; set; }
+        public int DestinationId { get; set; }
+        public int OriginId { get; set; }
+        //public City Destination { get; set; }
+        //public City Origin { get; set; }
         public DateTime Departure { get; set; }
         public DateTime Arrival { get; set; }
 

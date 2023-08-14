@@ -1,0 +1,11 @@
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Shared\bin\Debug\net6.0\TransportationCompany.Shared.deps.json
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Shared\bin\Debug\net6.0\TransportationCompany.Shared.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Shared\bin\Debug\net6.0\TransportationCompany.Shared.pdb
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Shared\obj\Debug\net6.0\TransportationCompany.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Shared\obj\Debug\net6.0\TransportationCompany.Shared.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Shared\obj\Debug\net6.0\TransportationCompany.Shared.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Shared\obj\Debug\net6.0\TransportationCompany.Shared.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Shared\obj\Debug\net6.0\TransportationCompany.Shared.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Shared\obj\Debug\net6.0\refint\TransportationCompany.Shared.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Shared\obj\Debug\net6.0\TransportationCompany.Shared.pdb
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Shared\obj\Debug\net6.0\ref\TransportationCompany.Shared.dll

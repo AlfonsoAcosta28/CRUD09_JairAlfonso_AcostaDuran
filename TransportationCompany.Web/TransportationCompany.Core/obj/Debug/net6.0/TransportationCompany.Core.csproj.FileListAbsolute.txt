@@ -1,7 +1,6 @@
 C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Core\bin\Debug\net6.0\TransportationCompany.Core.deps.json
 C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Core\bin\Debug\net6.0\TransportationCompany.Core.dll
 C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Core\bin\Debug\net6.0\TransportationCompany.Core.pdb
-C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Core\obj\Debug\net6.0\TransportationCompany.Core.csproj.AssemblyReference.cache
 C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Core\obj\Debug\net6.0\TransportationCompany.Core.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Core\obj\Debug\net6.0\TransportationCompany.Core.AssemblyInfoInputs.cache
 C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.Core\obj\Debug\net6.0\TransportationCompany.Core.AssemblyInfo.cs

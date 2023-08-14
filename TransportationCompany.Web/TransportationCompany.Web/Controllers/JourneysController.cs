@@ -38,7 +38,7 @@ namespace TransportationCompany.Web.Controllers
         }
 
         [HttpPut("{id}")]
-        public async void Put(int id, [FromBody] Journey value)
+        public async void Put(int id, [FromBody] JourneyDto value)
         {
             value.Id = id;
             await journeyAppService.EditJourneyAsync(value);

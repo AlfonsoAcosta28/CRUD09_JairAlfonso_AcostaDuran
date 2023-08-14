@@ -14,10 +14,12 @@ namespace TransportationCompany.Core.Entities
 
         public string Name { get; set; }
 
-        List<Journey> Journeys { get; set; }    
+        public List<Journey> DestinationJourneys { get; set; }    
+        public List<Journey> OriginJourneys { get; set; }
 
-        public City() { 
-            Journeys = new List<Journey>();
+        public City() {
+            DestinationJourneys = new List<Journey>();
+            OriginJourneys = new List<Journey>();
         }
     }
 }

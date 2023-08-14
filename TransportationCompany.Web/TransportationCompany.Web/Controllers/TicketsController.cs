@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TransportationCompany.Accounts.Dto;
+using TransportationCompany.ApplicationServices;
 using TransportationCompany.ApplicationServices.TicketsServices;
 using TransportationCompany.Core.Entities;
 
 namespace TransportationCompany.Web.Controllers
 {
+   // [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class TicketsController : ControllerBase
@@ -35,12 +38,15 @@ namespace TransportationCompany.Web.Controllers
         [HttpPost]
         public async void Post([FromBody] TicketDto value)
         {
+
             await ticketAppService.AddTicketAsync(value);
+           
         }
+
 
         // PUT api/<ColorsController>/5
         [HttpPut("{id}")]
-        public async void Put(int id, [FromBody] Ticket value)
+        public async void Put(int id, [FromBody] TicketDto value)
         {
             value.Id = id;
             await ticketAppService.EditTicketAsync(value);

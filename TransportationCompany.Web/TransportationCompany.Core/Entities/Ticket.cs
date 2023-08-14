@@ -11,8 +11,10 @@ namespace TransportationCompany.Core.Entities
     {
         [Key]
         public int Id { get; set; }
-        public Journey Journey { get; set; }
-        public Passengers Passenger { get; set; }
+        public int JourneyId { get; set; }
+        public int PassengerId { get; set; }
         public int Seat { get; set; }
+        public Journey Journey { get; set; }
+        public Passenger Passenger { get; set; }
     }
 }

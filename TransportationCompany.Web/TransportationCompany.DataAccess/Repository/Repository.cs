@@ -15,6 +15,7 @@
 
             try
             {
+                _context.ChangeTracker.Clear();
                 await _context.AddAsync(entity);
                 _context.SaveChanges();
                 return entity;
@@ -28,6 +29,7 @@
         public virtual async Task DeleteAsync(TId id)
         {
             var entity = await _context.FindAsync<TEntity>(id);
+            _context.ChangeTracker.Clear();
             _context.Remove<TEntity>(entity);
             await _context.SaveChangesAsync();
         }
@@ -59,7 +61,7 @@
             {
                 _context.ChangeTracker.Clear();
                 _context.Update(entity);
-                //await _context.SaveChangesAsync();
+               // await _context.SaveChangesAsync();
                 _context.SaveChanges();
                 return entity;
             }

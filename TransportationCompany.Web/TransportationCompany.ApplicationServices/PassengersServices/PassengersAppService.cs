@@ -8,16 +8,16 @@ namespace TransportationCompany.ApplicationServices.PassengersServices
 {
     public class PassengersAppService : IPassengersAppService
     {
-        private readonly IRepository<int, Passengers> _repository;
+        private readonly IRepository<int, Passenger> _repository;
         private readonly IMapper _mapper;
-        public PassengersAppService(IRepository<int, Passengers> repository, IMapper mapper)
+        public PassengersAppService(IRepository<int, Passenger> repository, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
         }
         public async Task<PassengersDto> AddPassengersAsync(PassengersDto elementDto)
         {
-            var eleent = _mapper.Map<Passengers>(elementDto);
+            var eleent = _mapper.Map<Passenger>(elementDto);
             await _repository.AddAsync(eleent);
             return elementDto;
         }
@@ -27,20 +27,20 @@ namespace TransportationCompany.ApplicationServices.PassengersServices
             await _repository.DeleteAsync(elementId);
         }
 
-        public async Task<Passengers> EditPassengersAsync(Passengers element)
+        public async Task<Passenger> EditPassengersAsync(Passenger element)
         {
             await _repository.UpdateAsync(element);
 
             return element;
         }
 
-        public async Task<Passengers> GetPassengersAsync(int elementId)
+        public async Task<Passenger> GetPassengersAsync(int elementId)
         {
             var element = await _repository.GetAsync(elementId);
             return element;
         }
 
-        public async Task<List<Passengers>> GetPassengersAsync()
+        public async Task<List<Passenger>> GetPassengersAsync()
         {
             var elements = await _repository.GetAll().ToListAsync();
             return elements;

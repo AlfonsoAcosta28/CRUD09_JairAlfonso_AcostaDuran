@@ -10,14 +10,14 @@ namespace TransportationCompany.ApplicationServices.PassengersServices
 {
     public interface IPassengersAppService
     {
-        Task<List<Passengers>> GetPassengersAsync();
+        Task<List<Passenger>> GetPassengersAsync();
 
         Task<PassengersDto> AddPassengersAsync(PassengersDto elementDto);
 
         Task DeletePassengersAsync(int elementId);
 
-        Task<Passengers> GetPassengersAsync(int elementId);
+        Task<Passenger> GetPassengersAsync(int elementId);
 
-        Task<Passengers> EditPassengersAsync(Passengers element);
+        Task<Passenger> EditPassengersAsync(Passenger element);
     }
 }

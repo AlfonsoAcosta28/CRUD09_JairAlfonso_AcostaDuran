@@ -196,3 +196,6 @@ C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationComp
 C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.UnitTest\obj\Debug\net6.0\TransportationCompany.UnitTest.pdb
 C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.UnitTest\obj\Debug\net6.0\TransportationCompany.UnitTest.genruntimeconfig.cache
 C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.UnitTest\obj\Debug\net6.0\ref\TransportationCompany.UnitTest.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.UnitTest\bin\Debug\net6.0\TransportationCompany.Shared.dll
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.UnitTest\bin\Debug\net6.0\TransportationCompany.Shared.pdb
+C:\Users\User\Documents\GitHub\CRUD09_JairAlfonso_AcostaDuran\TransportationCompany.Web\TransportationCompany.UnitTest\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

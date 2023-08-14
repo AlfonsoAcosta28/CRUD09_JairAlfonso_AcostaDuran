@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  transportationcompany.web:
+    image: ${DOCKER_REGISTRY-}transportationcompanyweb
+    build:
+      context: .
+      dockerfile: TransportationCompany.Web/Dockerfile

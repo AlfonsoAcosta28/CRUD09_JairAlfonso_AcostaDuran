@@ -16,8 +16,8 @@ namespace TransportationCompany.ApplicationServices
             CreateMap<Journey, JourneyDto>();
             CreateMap<JourneyDto, Journey>();
 
-            CreateMap<Passengers, PassengersDto>();
-            CreateMap<PassengersDto, Passengers>();
+            CreateMap<Passenger, PassengersDto>();
+            CreateMap<PassengersDto, Passenger>();
 
             CreateMap<Ticket, TicketDto>();
             CreateMap<TicketDto, Ticket>();

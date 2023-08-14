@@ -16,7 +16,7 @@ namespace TransportationCompany.DataAccess.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.20")
+                .HasAnnotation("ProductVersion", "6.0.21")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -238,22 +238,22 @@ namespace TransportationCompany.DataAccess.Migrations
                     b.Property<DateTime>("Departure")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("DestinationIdId")
+                    b.Property<int>("DestinationId")
                         .HasColumnType("int");
 
-                    b.Property<int>("OriginIdId")
+                    b.Property<int>("OriginId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DestinationIdId");
+                    b.HasIndex("DestinationId");
 
-                    b.HasIndex("OriginIdId");
+                    b.HasIndex("OriginId");
 
                     b.ToTable("Journeys");
                 });
 
-            modelBuilder.Entity("TransportationCompany.Core.Entities.Passengers", b =>
+            modelBuilder.Entity("TransportationCompany.Core.Entities.Passenger", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -298,7 +298,7 @@ namespace TransportationCompany.DataAccess.Migrations
 
                     b.HasIndex("PassengerId");
 
-                    b.ToTable("Ticket");
+                    b.ToTable("Tickets");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -354,21 +354,21 @@ namespace TransportationCompany.DataAccess.Migrations
 
             modelBuilder.Entity("TransportationCompany.Core.Entities.Journey", b =>
                 {
-                    b.HasOne("TransportationCompany.Core.Entities.City", "DestinationId")
-                        .WithMany()
-                        .HasForeignKey("DestinationIdId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                    b.HasOne("TransportationCompany.Core.Entities.City", "Destination")
+                        .WithMany("DestinationJourneys")
+                        .HasForeignKey("DestinationId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("TransportationCompany.Core.Entities.City", "OriginId")
-                        .WithMany()
-                        .HasForeignKey("OriginIdId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                    b.HasOne("TransportationCompany.Core.Entities.City", "Origin")
+                        .WithMany("OriginJourneys")
+                        .HasForeignKey("OriginId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("DestinationId");
+                    b.Navigation("Destination");
 
-                    b.Navigation("OriginId");
+                    b.Navigation("Origin");
                 });
 
             modelBuilder.Entity("TransportationCompany.Core.Entities.Ticket", b =>
@@ -379,7 +379,7 @@ namespace TransportationCompany.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TransportationCompany.Core.Entities.Passengers", "Passenger")
+                    b.HasOne("TransportationCompany.Core.Entities.Passenger", "Passenger")
                         .WithMany("Tickets")
                         .HasForeignKey("PassengerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -390,12 +390,19 @@ namespace TransportationCompany.DataAccess.Migrations
                     b.Navigation("Passenger");
                 });
 
+            modelBuilder.Entity("TransportationCompany.Core.Entities.City", b =>
+                {
+                    b.Navigation("DestinationJourneys");
+
+                    b.Navigation("OriginJourneys");
+                });
+
             modelBuilder.Entity("TransportationCompany.Core.Entities.Journey", b =>
                 {
                     b.Navigation("Tickets");
                 });
 
-            modelBuilder.Entity("TransportationCompany.Core.Entities.Passengers", b =>
+            modelBuilder.Entity("TransportationCompany.Core.Entities.Passenger", b =>
                 {
                     b.Navigation("Tickets");
                 });
