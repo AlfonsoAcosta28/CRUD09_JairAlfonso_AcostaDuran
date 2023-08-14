@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TransportationCompany.DataAccess.Repository
+﻿namespace TransportationCompany.DataAccess.Repository
 {
     public class Repository<TId, TEntity> : IRepository<TId, TEntity> where TEntity : class, new()
     {
@@ -21,8 +15,9 @@ namespace TransportationCompany.DataAccess.Repository
 
             try
             {
+                _context.ChangeTracker.Clear();
                 await _context.AddAsync(entity);
-                await _context.SaveChangesAsync();
+                _context.SaveChanges();
                 return entity;
             }
             catch (Exception ex)
@@ -34,6 +29,7 @@ namespace TransportationCompany.DataAccess.Repository
         public virtual async Task DeleteAsync(TId id)
         {
             var entity = await _context.FindAsync<TEntity>(id);
+            _context.ChangeTracker.Clear();
             _context.Remove<TEntity>(entity);
             await _context.SaveChangesAsync();
         }
@@ -42,7 +38,8 @@ namespace TransportationCompany.DataAccess.Repository
         {
             try
             {
-                return _context.Set<TEntity>();
+                var list = _context.Set<TEntity>();
+                return list;
             }
             catch (Exception ex)
             {
@@ -58,18 +55,21 @@ namespace TransportationCompany.DataAccess.Repository
 
         public virtual async Task<TEntity> UpdateAsync(TEntity entity)
         {
-            if (entity == null) throw new ArgumentNullException($"{nameof(AddAsync)} entity must not be null");
+            if (entity == null) throw new ArgumentNullException($"{nameof(entity)} must not be null");
 
             try
             {
+                _context.ChangeTracker.Clear();
                 _context.Update(entity);
-                await _context.SaveChangesAsync();
+               // await _context.SaveChangesAsync();
+                _context.SaveChanges();
                 return entity;
             }
             catch (Exception ex)
             {
-                throw new Exception($"{nameof(entity)} could not be update: {ex.Message}");
+                throw new Exception($"{nameof(entity)} could not be updated: {ex.Message}");
             }
         }
+
     }
 }

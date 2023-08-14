@@ -8,7 +8,7 @@ using TransportationCompany.DataAccess.Repository;
 
 namespace TransportationCompany.DataAccess.RepositoryEntities
 {
-    internal class PassengersRepository : Repository<int, Passengers>
+    public class PassengersRepository : Repository<int, Passenger>
     {
         public PassengersRepository(TransportationCompanyContext TransportationCompanyContext) : base(TransportationCompanyContext)
         {

@@ -3,15 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportationCompany.Web", "TransportationCompany.Web\TransportationCompany.Web.csproj", "{27F83BF0-887B-481F-A451-0C7DC1D35CA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransportationCompany.Web", "TransportationCompany.Web\TransportationCompany.Web.csproj", "{27F83BF0-887B-481F-A451-0C7DC1D35CA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportationCompany.Core", "TransportationCompany.Core\TransportationCompany.Core.csproj", "{C39D77D2-D181-4F32-AA1D-4F8389560BE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransportationCompany.Core", "TransportationCompany.Core\TransportationCompany.Core.csproj", "{C39D77D2-D181-4F32-AA1D-4F8389560BE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportationCompany.DataAccess", "TransportationCompany.DataAccess\TransportationCompany.DataAccess.csproj", "{87BC803A-69C8-425A-9872-3C44590B5E07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransportationCompany.DataAccess", "TransportationCompany.DataAccess\TransportationCompany.DataAccess.csproj", "{87BC803A-69C8-425A-9872-3C44590B5E07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportationCompany.ApplicationServices", "TransportationCompany.ApplicationServices\TransportationCompany.ApplicationServices.csproj", "{D8B8E8CD-7447-49FB-8F7A-7EDEC7A3A6E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransportationCompany.ApplicationServices", "TransportationCompany.ApplicationServices\TransportationCompany.ApplicationServices.csproj", "{D8B8E8CD-7447-49FB-8F7A-7EDEC7A3A6E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportationCompany.ApplicationServices.Shared", "TransportationCompany.ApplicationServices.Shared\TransportationCompany.ApplicationServices.Shared.csproj", "{09B967CE-0372-4B29-BDA9-77B85DF706DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransportationCompany.ApplicationServices.Shared", "TransportationCompany.ApplicationServices.Shared\TransportationCompany.ApplicationServices.Shared.csproj", "{09B967CE-0372-4B29-BDA9-77B85DF706DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransportationCompany.UnitTest", "TransportationCompany.UnitTest\TransportationCompany.UnitTest.csproj", "{2431B268-3768-4190-98BF-0AD68F9CA6C3}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{701115D3-23DF-4110-BABC-15F959891ACE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportationCompany.Shared", "TransportationCompany.Shared\TransportationCompany.Shared.csproj", "{C6E0C3F0-CEB6-478E-83E8-ECFFD0BD5A97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,18 @@ Global
 		{09B967CE-0372-4B29-BDA9-77B85DF706DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09B967CE-0372-4B29-BDA9-77B85DF706DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09B967CE-0372-4B29-BDA9-77B85DF706DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2431B268-3768-4190-98BF-0AD68F9CA6C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2431B268-3768-4190-98BF-0AD68F9CA6C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2431B268-3768-4190-98BF-0AD68F9CA6C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2431B268-3768-4190-98BF-0AD68F9CA6C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{701115D3-23DF-4110-BABC-15F959891ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{701115D3-23DF-4110-BABC-15F959891ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{701115D3-23DF-4110-BABC-15F959891ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{701115D3-23DF-4110-BABC-15F959891ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6E0C3F0-CEB6-478E-83E8-ECFFD0BD5A97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E0C3F0-CEB6-478E-83E8-ECFFD0BD5A97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E0C3F0-CEB6-478E-83E8-ECFFD0BD5A97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E0C3F0-CEB6-478E-83E8-ECFFD0BD5A97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
