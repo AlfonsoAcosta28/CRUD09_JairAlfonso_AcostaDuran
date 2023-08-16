@@ -2,13 +2,7 @@
 using AutoMapper.Execution;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.Metrics;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using TransportationCompany.Accounts.Dto;
 using TransportationCompany.Core.Entities;
 using TransportationCompany.DataAccess.Repository;
@@ -19,22 +13,17 @@ namespace TransportationCompany.ApplicationServices.TicketsServices
     {
         private readonly IRepository<int, Ticket> _repository;
         private readonly IMapper _mapper;
-        private readonly IHttpClientFactory _httpClientFactory;
-        public TicketAppService(IRepository<int, Ticket> repository, IMapper mapper
-            , IHttpClientFactory httpClient)
-            //)
+        private readonly IChecker _checker;
+        public TicketAppService(IRepository<int, Ticket> repository, IMapper mapper, IChecker checker)
         {
             _repository = repository;
-            _httpClientFactory = httpClient;
             _mapper = mapper;
+            _checker = checker;
         }
         public async Task<TicketDto> AddTicketAsync(TicketDto elementDto)
         {
            
-            var httpClient = _httpClientFactory.CreateClient();
-            var checker = new Checker(httpClient);
-
-            if (await checker.Check(elementDto.JourneyId, elementDto.PassengerId))
+            if (await _checker.Check(elementDto))
             {
                 var element = _mapper.Map<Ticket>(elementDto);
                 await _repository.AddAsync(element);
@@ -46,6 +35,7 @@ namespace TransportationCompany.ApplicationServices.TicketsServices
             }
         }
 
+       
 
         public async Task DeleteTicketAsync(int elementId)
         {

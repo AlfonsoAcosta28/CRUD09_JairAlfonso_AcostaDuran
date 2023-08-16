@@ -16,7 +16,7 @@ namespace TransportationCompany.DataAccess.RepositoryEntities
         }
         public override async Task<Journey> AddAsync(Journey entity)
         {
-            //var origin = await Context.Cities.FindAsync(entity.OriginId);
+           // var origin = await Context.Cities.FindAsync(entity.OriginId);
             //var destination = await Context.Cities.FindAsync(entity.DestinationId);
 
             var origin =  Context.Cities.Find(entity.OriginId);
