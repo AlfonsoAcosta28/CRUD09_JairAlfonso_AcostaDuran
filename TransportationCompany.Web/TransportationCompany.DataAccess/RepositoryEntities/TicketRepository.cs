@@ -15,9 +15,9 @@ namespace TransportationCompany.DataAccess.RepositoryEntities
         {
         }
 
-        public override async Task<Ticket> AddAsync(Ticket entity)
+     /*   public override async Task<Ticket> AddAsync(Ticket entity)
         {
-           // var journey = await Context.Journeys.FindAsync(entity.JourneyId);
+            //var journey = await Context.Journeys.FindAsync(entity.JourneyId);
             //var passenger = await Context.Passengers.FindAsync(entity.PassengerId);
 
             var journey =  Context.Journeys.Find(entity.JourneyId);
@@ -35,7 +35,7 @@ namespace TransportationCompany.DataAccess.RepositoryEntities
            // await Context.SaveChangesAsync();
             return entity;
         }
-
+     */
         public override async Task<Ticket> GetAsync(int id)
         {
             var ticket = await Context.Tickets

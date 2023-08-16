@@ -40,7 +40,7 @@ namespace TransportationCompany.Web.Controllers
         {
 
             await ticketAppService.AddTicketAsync(value);
-           
+            
         }
 
 

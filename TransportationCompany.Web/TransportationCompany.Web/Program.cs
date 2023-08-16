@@ -51,6 +51,7 @@ builder.Services.AddControllers().AddNewtonsoftJson(x => x.SerializerSettings.Re
 builder.Services.AddTransient<ITicketAppService, TicketAppService>();
 builder.Services.AddTransient<IJourneyAppService, JourneyAppService>();
 builder.Services.AddTransient<IPassengersAppService, PassengersAppService>();
+builder.Services.AddTransient<IChecker, Checker>();
 
 builder.Services.AddTransient<IJwtIssuerOptions, JwtIssuerFactory>();
 
