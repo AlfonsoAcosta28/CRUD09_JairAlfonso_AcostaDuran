@@ -10,8 +10,8 @@ namespace TransportationCompany.Accounts.Dto
 {
     public class PassengersDto
     {
-        [Key]
         public int Id { get; set; }
+
         [Required]
         [StringLength(32)]
         public string FirstName { get; set; }

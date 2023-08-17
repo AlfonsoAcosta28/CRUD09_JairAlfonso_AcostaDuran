@@ -12,6 +12,7 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.21",
           "Microsoft.EntityFrameworkCore": "6.0.21",
           "Microsoft.EntityFrameworkCore.Design": "6.0.21",
+          "Microsoft.EntityFrameworkCore.Tools": "6.0.21",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.18.1",
           "Newtonsoft.Json": "13.0.3",
           "Pomelo.EntityFrameworkCore.MySql": "6.0.2",
@@ -283,6 +284,11 @@
             "assemblyVersion": "6.0.21.0",
             "fileVersion": "6.0.2123.36206"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/6.0.21": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "6.0.21"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
@@ -1282,6 +1288,13 @@
       "sha512": "sha512-csFkL9F/pk3od2p6I9OxlnYmKGM0kmWoJx2GOQbAgvmq8QT41MUZKETVAewAKmGiI7lg10jc4KTb/IaLr7rN+w==",
       "path": "microsoft.entityframeworkcore.sqlserver/6.0.21",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.6.0.21.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/6.0.21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IFh+eXqp0t4WEQ7ZE++lJWEdaX4NQ6HcNpHqNKqFd+h+tnFgTM/RIEYzo56U//+dbIi4/bhnglSMH9cvYqLZ5A==",
+      "path": "microsoft.entityframeworkcore.tools/6.0.21",
+      "hashPath": "microsoft.entityframeworkcore.tools.6.0.21.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
       "type": "package",

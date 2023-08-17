@@ -18,6 +18,6 @@ namespace TransportationCompany.ApplicationServices.PassengersServices
 
         Task<Passenger> GetPassengersAsync(int elementId);
 
-        Task<Passenger> EditPassengersAsync(Passenger element);
+        Task<Passenger> EditPassengersAsync(PassengersDto element);
     }
 }

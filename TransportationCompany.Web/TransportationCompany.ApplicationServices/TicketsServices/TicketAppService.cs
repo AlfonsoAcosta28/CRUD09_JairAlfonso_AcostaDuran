@@ -5,6 +5,7 @@ using Newtonsoft.Json.Linq;
 using System.Net.Http;
 using TransportationCompany.Accounts.Dto;
 using TransportationCompany.Core.Entities;
+using TransportationCompany.DataAccess;
 using TransportationCompany.DataAccess.Repository;
 
 namespace TransportationCompany.ApplicationServices.TicketsServices
@@ -22,12 +23,17 @@ namespace TransportationCompany.ApplicationServices.TicketsServices
         }
         public async Task<TicketDto> AddTicketAsync(TicketDto elementDto)
         {
-           
-            if (await _checker.Check(elementDto))
+            
+            if (await _checker.Check(elementDto) != null)
             {
+                var a = _repository.Context;
                 var element = _mapper.Map<Ticket>(elementDto);
-                await _repository.AddAsync(element);
-                return elementDto;
+              //  using (var repository = IRepository())
+                {
+                    var c = _repository.Context;
+                    await _repository.AddAsync(element);
+                    return elementDto;
+                }
             }
             else
             {
@@ -35,7 +41,6 @@ namespace TransportationCompany.ApplicationServices.TicketsServices
             }
         }
 
-       
 
         public async Task DeleteTicketAsync(int elementId)
         {

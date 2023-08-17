@@ -11,17 +11,8 @@ namespace TransportationCompany.ApplicationServices
 {
     public class Checker : IChecker
     {
-        //private readonly HttpClient _httpClient;
 
-        //private readonly IHttpClientFactory _httpClientFactory;
-
-        public Checker()
-        {
-            //_httpClient = httpClient;
-            //_httpClientFactory = httpClientFactory;
-        }
-
-        public async Task<bool> Check(TicketDto element)
+        public async Task<TicketDto> Check(TicketDto element)
         {
             using (var client = new HttpClient())
             {
@@ -31,37 +22,11 @@ namespace TransportationCompany.ApplicationServices
                 var response2 = await client.GetAsync($"{journeysUrl}/{element.JourneyId}");
                 if (response.IsSuccessStatusCode && response2.IsSuccessStatusCode)
                 {
-                    // var content = await response.Content.ReadAsStringAsync();
-                    // Passenger passengerJson = Newtonsoft.Json.JsonConvert.DeserializeObject<Passenger>(content);
-
-
-                    return true;
+                    return element;
                 }
-                return false;
+                return null;
 
             }
-            /*
-            using (var client = new HttpClient())
-            {
-                try
-                {
-                    var journeyResponse = await client.GetAsync($"https://localhost:7252/api/Journeys/{element.JourneyId}");
-                    var passengerResponse = await client.GetAsync($"https://localhost:7252/api/Passengers/{element.PassengerId}");
-
-                    if (!journeyResponse.IsSuccessStatusCode || !passengerResponse.IsSuccessStatusCode)
-                    {
-                        return false;
-                    }
-
-                    return true;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error al verificar: {ex.Message}");
-                    return false;
-                }
-            }
-            */
         }
     }
 }

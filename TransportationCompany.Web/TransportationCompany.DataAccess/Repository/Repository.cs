@@ -2,8 +2,9 @@
 {
     public class Repository<TId, TEntity> : IRepository<TId, TEntity> where TEntity : class, new()
     {
-        private readonly TransportationCompanyContext _context;
-        protected TransportationCompanyContext Context { get => _context; }
+        public readonly TransportationCompanyContext _context;
+        public TransportationCompanyContext Context { get => _context; }
+
         public Repository(TransportationCompanyContext TransportationCompanyContext)
         {
             _context = TransportationCompanyContext;

@@ -8,6 +8,8 @@ namespace TransportationCompany.DataAccess.Repository
 {
     public interface IRepository<TId, TEntity> where TEntity : class, new()
     {
+        TransportationCompanyContext Context { get; }
+
         IQueryable<TEntity> GetAll();
         Task<TEntity> GetAsync(TId id);
         Task<TEntity> AddAsync(TEntity entity);
