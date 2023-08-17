@@ -11,16 +11,19 @@ namespace TransportationCompany.DataAccess.RepositoryEntities
 {
     public class TicketRepository : Repository<int, Ticket>
     {
+        private readonly TransportationCompanyContext _context;
+
         public TicketRepository(TransportationCompanyContext TransportationCompanyContext) : base(TransportationCompanyContext)
         {
+            _context = TransportationCompanyContext;
         }
 
-     /*   public override async Task<Ticket> AddAsync(Ticket entity)
+        public override async Task<Ticket> AddAsync(Ticket entity)
         {
             //var journey = await Context.Journeys.FindAsync(entity.JourneyId);
             //var passenger = await Context.Passengers.FindAsync(entity.PassengerId);
-
-            var journey =  Context.Journeys.Find(entity.JourneyId);
+            var c = _context;
+            var journey =  _context.Journeys.Find(entity.JourneyId);
             var passenger =  Context.Passengers.Find(entity.PassengerId);
 
             entity.Passenger = null;
@@ -35,7 +38,7 @@ namespace TransportationCompany.DataAccess.RepositoryEntities
            // await Context.SaveChangesAsync();
             return entity;
         }
-     */
+
         public override async Task<Ticket> GetAsync(int id)
         {
             var ticket = await Context.Tickets

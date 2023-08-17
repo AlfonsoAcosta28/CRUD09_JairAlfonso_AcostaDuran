@@ -10,7 +10,6 @@ namespace TransportationCompany.Accounts.Dto
 {
     public class TicketDto
     {
-        [Key]
         public int Id { get; set; }
         public int JourneyId { get; set; }
         public int PassengerId { get; set; }

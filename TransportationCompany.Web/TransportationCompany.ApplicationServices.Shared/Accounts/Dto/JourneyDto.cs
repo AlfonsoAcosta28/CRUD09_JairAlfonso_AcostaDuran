@@ -10,7 +10,6 @@ namespace TransportationCompany.Accounts.Dto
 {
     public class JourneyDto
     {
-        [Key]
         public int Id { get; set; }
         public int DestinationId { get; set; }
         public int OriginId { get; set; }

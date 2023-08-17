@@ -7,7 +7,7 @@ using TransportationCompany.Core.Entities;
 
 namespace TransportationCompany.Web.Controllers
 {
-   // [Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class TicketsController : ControllerBase
@@ -18,7 +18,6 @@ namespace TransportationCompany.Web.Controllers
             ticketAppService = ticketApp;
         }
 
-        // GET: api/<ColorsController>
         [HttpGet]
         public async Task<IEnumerable<Ticket>> GetAll()
         {
@@ -26,7 +25,6 @@ namespace TransportationCompany.Web.Controllers
             return list;
         }
 
-        // GET api/<ColorsController>/5
         [HttpGet("{id}")]
         public async Task<Ticket> Get(int id)
         {
@@ -34,7 +32,6 @@ namespace TransportationCompany.Web.Controllers
             return element;
         }
 
-        // POST api/<ColorsController>
         [HttpPost]
         public async void Post([FromBody] TicketDto value)
         {
@@ -43,8 +40,6 @@ namespace TransportationCompany.Web.Controllers
             
         }
 
-
-        // PUT api/<ColorsController>/5
         [HttpPut("{id}")]
         public async void Put(int id, [FromBody] TicketDto value)
         {
@@ -52,7 +47,6 @@ namespace TransportationCompany.Web.Controllers
             await ticketAppService.EditTicketAsync(value);
         }
 
-        // DELETE api/<ColorsController>/5
         [HttpDelete("{id}")]
         public async void Delete(int id)
         {

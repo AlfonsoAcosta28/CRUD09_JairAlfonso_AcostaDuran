@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Org.BouncyCastle.Crypto.Tls;
 using Serilog;
 using System.Configuration;
 using System.Text;
@@ -34,17 +35,6 @@ builder.Services.AddAutoMapper(typeof(MapperProfile));
 string connectionString = builder.Configuration.GetConnectionString("Default");
 
 builder.Services.AddDbContext<TransportationCompanyContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
-
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => {
-    options.Password.RequireDigit = true;
-    options.Password.RequireLowercase = true;
-    options.Password.RequireUppercase = true;
-    options.Password.RequireNonAlphanumeric = true;
-    options.Password.RequiredLength = 7;
-    options.Password.RequiredUniqueChars = 4;
-}).AddEntityFrameworkStores<TransportationCompanyContext>().AddDefaultTokenProviders();
-
-builder.Services.Configure<JwtTokenValidationSettings>(builder.Configuration.GetSection("JwtTokenValidationSettings"));
 
 builder.Services.AddControllers().AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
@@ -128,9 +118,56 @@ builder.Services.AddAuthentication(op =>
         ClockSkew = TimeSpan.Zero
     };
 });
+builder.Services.Configure<JwtTokenValidationSettings>(builder.Configuration.GetSection("JwtTokenValidationSettings"));
 
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => {
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequiredLength = 7;
+    options.Password.RequiredUniqueChars = 4;
+}).AddEntityFrameworkStores<TransportationCompanyContext>().AddDefaultTokenProviders();
+
+//var tokenValidationSettings = builder.Configuration.GetSection("JwtTokenValidationSettings").Get<JwtTokenValidationSettings>();
+/*
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidIssuer = tokenValidationSettings.ValidIssuer,
+            ValidateAudience = true,
+            ValidAudience = tokenValidationSettings.ValidAudience,
+            ValidateLifetime = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(tokenValidationSettings.SecretKey)),
+            ValidateIssuerSigningKey = true,
+        };
+    });
+*/
 builder.Services.AddHttpClient();
+/*
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidateAudience = true,
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            ValidateLifetime = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
+            ValidateIssuerSigningKey = true,
+        };
+    });
 
+*/
 var app = builder.Build();
 app.InitDb();
 if (app.Environment.IsDevelopment())
@@ -142,9 +179,8 @@ if (app.Environment.IsDevelopment())
 app.MapControllerRoute(name: "default", pattern: "{controller=swagger}/{actSystem.AggregateException: 'Some services are not able to be constructed (Error while validating ion=Index}/{id?}");
 
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
 
 app.Run();

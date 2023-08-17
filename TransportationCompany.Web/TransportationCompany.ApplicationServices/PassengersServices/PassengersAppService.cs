@@ -27,10 +27,10 @@ namespace TransportationCompany.ApplicationServices.PassengersServices
             await _repository.DeleteAsync(elementId);
         }
 
-        public async Task<Passenger> EditPassengersAsync(Passenger element)
+        public async Task<Passenger> EditPassengersAsync(PassengersDto elementDto)
         {
+            var element = _mapper.Map<Passenger>(elementDto);
             await _repository.UpdateAsync(element);
-
             return element;
         }
 

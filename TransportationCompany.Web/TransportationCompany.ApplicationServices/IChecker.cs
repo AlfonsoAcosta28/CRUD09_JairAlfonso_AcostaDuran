@@ -9,6 +9,6 @@ namespace TransportationCompany.ApplicationServices
 {
     public interface IChecker
     {
-        Task<bool> Check(TicketDto element);
+        Task<TicketDto> Check(TicketDto element);
     }
 }

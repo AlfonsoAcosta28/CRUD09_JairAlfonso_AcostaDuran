@@ -8,7 +8,6 @@ namespace TransportationCompany.Web.Auth
     public interface IJwtIssuerOptions
     {
         String Issuer { get; }
-
         String Audience { get; }
         TimeSpan ValidFor { get; }
         DateTime NotBefore { get; }
@@ -18,19 +17,13 @@ namespace TransportationCompany.Web.Auth
 
         SigningCredentials SigningCredentials { get; }
     }
-
     public class JwtIssuerFactory : IJwtIssuerOptions
     {
         public String Issuer { get; private set; }
-
         public String Audience { get; private set; }
-
         public TimeSpan ValidFor { get; private set; }
-
         public DateTime NotBefore { get; private set; }
-
         public DateTime IssuedAt { get; private set; }
-
         public DateTime Expires { get; private set; }
 
         public SigningCredentials SigningCredentials { get; private set; }
@@ -50,7 +43,7 @@ namespace TransportationCompany.Web.Auth
             SigningCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
         }
 
-        public async Task<string> JtiGenerator()
+        public async Task<String> JtiGenerator()
         {
             return await Task.FromResult(Guid.NewGuid().ToString());
         }

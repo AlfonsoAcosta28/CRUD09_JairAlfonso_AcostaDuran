@@ -15,23 +15,28 @@ namespace TransportationCompany.Web.Controllers
     [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
+        private readonly ILogger<AuthController> _logger;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly IJwtIssuerOptions _jwtIssuerOptions;
+        private readonly IJwtIssuerOptions _jwtOptions;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IOptions<JwtTokenValidationSettings> _jwtConfig;
-        public AuthController(UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager,
-            IJwtIssuerOptions jwtIssuerOptions,
-            RoleManager<IdentityRole> roleManager,
-            IOptions<JwtTokenValidationSettings> jwtConfig)
+        public AuthController(
+             ILogger<AuthController> logger,
+             UserManager<IdentityUser> userManager,
+             SignInManager<IdentityUser> signInManager,
+             IJwtIssuerOptions jwtOptions,
+             RoleManager<IdentityRole> roleManager,
+             IOptions<JwtTokenValidationSettings> jwtConfig)
         {
+            _logger = logger;
             _userManager = userManager;
             _signInManager = signInManager;
-            _jwtIssuerOptions = jwtIssuerOptions;
+            _jwtOptions = jwtOptions;
             _roleManager = roleManager;
             _jwtConfig = jwtConfig;
         }
+
 
         [HttpPost]
         public async Task<IActionResult> Login(LoginModel model)
@@ -47,67 +52,56 @@ namespace TransportationCompany.Web.Controllers
                 return Unauthorized();
             }
 
-            var resuslt = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
+            var passwordResult = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
 
-            if (user == null || !(await _signInManager.PasswordSignInAsync(user, model.Password, false, false)).Succeeded)
+            if (!passwordResult.Succeeded)
             {
                 return Unauthorized();
             }
 
             var tokenString = await CreateJwtTokenAsync(user);
-            var result = new ContentResult()
-            {
-                Content = tokenString,
-                ContentType = "application/text",
-            };
-
+            var result = new ContentResult() { Content = tokenString, ContentType = "application/text" };
+            //return Content(tokenString, "application/text");
             return result;
         }
 
-        private async Task<String> CreateJwtTokenAsync(IdentityUser user)
+        private async Task<string> CreateJwtTokenAsync(IdentityUser user)
         {
-            var claims = new List<Claim>(new[]
-            {
-                new Claim(JwtRegisteredClaimNames.Iss, _jwtIssuerOptions.Issuer),
-
-                new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
-
-                new Claim(JwtRegisteredClaimNames.Email, user.Email),
-
-                new Claim(JwtRegisteredClaimNames.Jti, await _jwtIssuerOptions.JtiGenerator()),
-                new Claim(JwtRegisteredClaimNames.Iat, _jwtIssuerOptions.IssuedAt.ToUnixEpochDate().ToString(), ClaimValueTypes.Integer64)
-            });
+            var claims = new List<Claim>
+        {
+            new(JwtRegisteredClaimNames.Iss, _jwtOptions.Issuer),
+            new(JwtRegisteredClaimNames.Sub, user.UserName),
+            new(JwtRegisteredClaimNames.Email, user.Email),
+            new(JwtRegisteredClaimNames.Jti, await _jwtOptions.JtiGenerator()),
+            new(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToUnixEpochDate().ToString(), ClaimValueTypes.Integer64)
+        };
 
             claims.AddRange(await _userManager.GetClaimsAsync(user));
 
-            var rolesNames = await _userManager.GetRolesAsync(user);
+            var roleNames = await _userManager.GetRolesAsync(user);
 
-            foreach (var rolesName in rolesNames)
+            foreach (var roleName in roleNames)
             {
-                var role = await _roleManager.FindByNameAsync(rolesName);
+                var role = await _roleManager.FindByNameAsync(roleName);
                 if (role != null)
                 {
-                    var roleClaim = new Claim(ClaimTypes.Role, role.Name, ClaimValueTypes.String);
+                    var roleClaim = new Claim(ClaimTypes.Role, role.Name, ClaimValueTypes.String, _jwtOptions.Issuer);
                     claims.Add(roleClaim);
 
                     var roleClaims = await _roleManager.GetClaimsAsync(role);
-                    claims.AddRange(claims);
+                    claims.AddRange(roleClaims);
                 }
             }
 
-            var jwt = new JwtSecurityToken
-            (
-                issuer: _jwtIssuerOptions.Issuer,
-                audience: _jwtIssuerOptions.Audience,
+            var jwt = new JwtSecurityToken(
+                issuer: _jwtOptions.Issuer,
+                audience: _jwtOptions.Audience,
                 claims: claims,
-                notBefore: _jwtIssuerOptions.NotBefore,
-                expires: _jwtIssuerOptions.Expires,
-                signingCredentials: _jwtIssuerOptions.SigningCredentials
-
-            );
+                notBefore: _jwtOptions.NotBefore,
+                expires: _jwtOptions.Expires,
+                signingCredentials: _jwtOptions.SigningCredentials);
 
             var result = new JwtSecurityTokenHandler().WriteToken(jwt);
-
             return result;
         }
     }

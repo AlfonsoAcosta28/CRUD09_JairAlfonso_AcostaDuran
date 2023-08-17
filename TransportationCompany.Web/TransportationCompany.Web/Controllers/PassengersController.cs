@@ -36,7 +36,7 @@ namespace TransportationCompany.Web.Controllers
         }
 
         [HttpPut("{id}")]
-        public async void Put(int id, [FromBody] Passenger value)
+        public async void Put(int id, [FromBody] PassengersDto value)
         {
             value.Id = id;
             await passengersAppService.EditPassengersAsync(value);
