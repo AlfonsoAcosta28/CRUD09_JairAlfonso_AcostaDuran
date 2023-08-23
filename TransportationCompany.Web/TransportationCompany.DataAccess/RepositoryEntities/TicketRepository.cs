@@ -22,9 +22,13 @@ namespace TransportationCompany.DataAccess.RepositoryEntities
         {
             //var journey = await Context.Journeys.FindAsync(entity.JourneyId);
             //var passenger = await Context.Passengers.FindAsync(entity.PassengerId);
-            var c = _context;
             var journey =  _context.Journeys.Find(entity.JourneyId);
             var passenger =  Context.Passengers.Find(entity.PassengerId);
+
+            if ( passenger == null || journey == null) { 
+
+                 throw new InvalidOperationException("JourneyId y/o PassengerId no existen en otros microservicios.");
+            }
 
             entity.Passenger = null;
             entity.Journey = null;

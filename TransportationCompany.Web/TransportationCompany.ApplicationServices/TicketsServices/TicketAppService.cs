@@ -24,20 +24,20 @@ namespace TransportationCompany.ApplicationServices.TicketsServices
         public async Task<TicketDto> AddTicketAsync(TicketDto elementDto)
         {
             
-            if (await _checker.Check(elementDto) != null)
+            //if (await _checker.Check(elementDto) != null)
             {
-                var a = _repository.Context;
-                var element = _mapper.Map<Ticket>(elementDto);
+               // var a = _repository.Context;
+               var element = _mapper.Map<Ticket>(elementDto);
               //  using (var repository = IRepository())
                 {
-                    var c = _repository.Context;
+              //      var c = _repository.Context;
                     await _repository.AddAsync(element);
                     return elementDto;
                 }
             }
-            else
+            //else
             {
-                throw new InvalidOperationException("JourneyId y/o PassengerId no existen en otros microservicios.");
+              //  throw new InvalidOperationException("JourneyId y/o PassengerId no existen en otros microservicios.");
             }
         }
 
