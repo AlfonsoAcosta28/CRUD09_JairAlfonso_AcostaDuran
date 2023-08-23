@@ -1,0 +1,215 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Client\\TransportationCompany.Client.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Client\\TransportationCompany.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Client\\TransportationCompany.Client.csproj",
+        "projectName": "TransportationCompany.Client",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Client\\TransportationCompany.Client.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Core\\TransportationCompany.Core.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Core\\TransportationCompany.Core.csproj"
+              },
+              "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Shared\\TransportationCompany.Shared.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Shared\\TransportationCompany.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Core\\TransportationCompany.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Core\\TransportationCompany.Core.csproj",
+        "projectName": "TransportationCompany.Core",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Core\\TransportationCompany.Core.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Shared\\TransportationCompany.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Shared\\TransportationCompany.Shared.csproj",
+        "projectName": "TransportationCompany.Shared",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Shared\\TransportationCompany.Shared.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\CRUD09_JairAlfonso_AcostaDuran\\TransportationCompany.Web\\TransportationCompany.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

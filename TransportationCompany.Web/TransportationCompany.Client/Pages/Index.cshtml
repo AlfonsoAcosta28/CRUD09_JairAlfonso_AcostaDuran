@@ -1,0 +1,79 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To Transportation Company</h1>
+</div>
+<h2>Passengers list</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var element in Model.passengers)
+        {
+            <tr>
+                <td>@element.Id</td>
+                <td>@element.FirstName</td>
+                <td>@element.LastName</td>
+                <td>@element.Age</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Journeys list</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Origin</th>
+            <th>Destination</th>
+            <th>Arrival</th>
+            <th>Departure</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var element in Model.journeys)
+        {
+            <tr>
+                <td>@element.Id</td>
+                <td>@element.Origin.Name</td>
+                <td>@element.Destination.Name</td>
+                <td>@element.Arrival</td>
+                <td>@element.Departure</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Tickets list</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Passenger</th>
+            <th>Journey Id</th>
+            <th>Seat</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var element in Model.tickets)
+        {
+            <tr>
+                <td>@element.Id</td>
+                <td>@element.Passenger.FirstName</td>
+                <td>@element.Journey.Id</td>
+                <td>@element.Seat</td>
+            </tr>
+        }
+    </tbody>
+</table>
