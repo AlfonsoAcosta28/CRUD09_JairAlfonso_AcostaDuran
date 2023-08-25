@@ -43,8 +43,6 @@ namespace TransportationCompany.Client.Utils
         public async Task LogoutAsync()
         {
             await httpContext.SignOutAsync(JwtBearerDefaults.AuthenticationScheme);
-
-            string a = ""; 
         }
 
         public ClaimPrincipalManager(IHttpContextAccessor httpContextAccessor,
@@ -116,7 +114,7 @@ namespace TransportationCompany.Client.Utils
                 if (jwtToken.IsNullOrEmpty())
                     return false;
 
-                 await LogoutAsync();
+                await LogoutAsync();
 
                 var tokenHandler = new JwtSecurityTokenHandler();
 
